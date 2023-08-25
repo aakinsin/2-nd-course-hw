@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.center {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.header {
+  background-image: url(img/bgimg.png);
+  height: 1024px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.header__head {
+  color: #FFF;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-top: 217px;
+  padding-bottom: 32px;
+  width: 788px;
+  height: 125px;
+}
+.header__text {
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+  padding-bottom: 44px;
+  width: 481px;
+  height: 64px;
+}
+.header__text_bold {
+  font-weight: 700;
+  text-decoration: none;
+}
+.header__button {
+  border-radius: 30px;
+  background: #9C0332;
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 13px 74px 13px 74px;
+}
+
+.game {
+  background-color: #000915;
+  height: 556px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.game__number {
+  border-radius: 16px;
+  width: 379px;
+  height: 300px;
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  padding-left: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.game__number_1 {
+  background-image: url(img/game_1.png);
+}
+.game__number_2 {
+  background-image: url(img/game_2.png);
+}
+.game__number_3 {
+  background-image: url(img/game_3.png);
+}/*# sourceMappingURL=style.css.map */
