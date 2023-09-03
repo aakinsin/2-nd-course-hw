@@ -1,50 +1,74 @@
-alert('Задание 1');
-let a = 10;
-alert(a);
-a = 20;
-alert(a);
-alert('Задание 2');
-let year = 2007;
-alert(`Год выпуска первого айфона ${year}.`);
-alert('Задание 3');
-let name = 'Брендан Эйх';
-alert(`Имя создателя языка JavaScript ${name}`);
-alert('Задание 4');
-a = 10;
-let b = 2;
-alert(`Сумма ${a + b}`);
-alert(`Разность ${a - b}`);
-alert(`Произведение ${a * b}`);
-alert(`Частное ${a / b}`);
-alert('Задание 5');
-let result = b ** 5;
-alert(`2^5=${result}`);
-alert('Задание 6');
-a = 9;
-alert(`Остаток деления ${a % b}`);
-alert('Задание 7');
-let num = 1;
-num += 5;
-num -= 3;
-num *= 7;
-num /= 3;
-num += 1;
-num -= 1;
-alert(num);
-alert('Задание 8');
-let age = prompt('Сколько вам лет?');
-alert(`Вам всего лишь ${age}. У Вас всё ещё впереди)`);
-alert('Задание 9');
-const user = {
-    name: ' Петя',
-    age: '25',
-    isAdmin: '0',
-};
-user['city of residence'] = 0;
-user.age = 40;
-delete user['cite of residence'];
-info = prompt("Какую информацию хотите узнать о пользователе?");
-alert(user[info]);
-alert('Задание 10');
-name = prompt('Как Вас зовут?');
-confirm(`Вы уверены, что Вас зовут ${name}?`);
+//Задание 1
+let password = 'password';
+
+let pass = prompt('Введите пароль');
+if (password === pass) {
+    console.log('Пароль введен верно');
+} else {
+    console.log('Пароль введен неправильно');
+}
+//Задание 2
+let c = 5;
+if (c > 0 && c < 10) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
+//Задание 3
+let d = 50;
+let e = 110;
+if (d > 100 || e > 100) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
+//Задание 4
+let a = '2';
+let b = '3';
+// Код выше изменять менять нельзя, чтобы решить задачу исправьте код ниже: 
+a = Number(a);
+b = Number(b);
+alert(a + b);
+//Задание 5
+let monthNumber = Number(prompt('Напишите номер месяца'));
+switch (monthNumber) {
+    case 1:
+        console.log('Зима');
+        break;
+    case 2:
+        console.log('Зима');
+        break;
+    case 3:
+        console.log('Весна');
+        break;
+    case 4:
+        console.log('Весна');
+        break;
+    case 5:
+        console.log('Весна');
+        break;
+    case 6:
+        console.log('Лето');
+        break;
+    case 7:
+        console.log('Лето');
+        break;
+    case 8:
+        console.log('Лето');
+        break;
+    case 9:
+        console.log('Осень');
+        break;
+    case 10:
+        console.log('Осень');
+        break;
+    case 11:
+        console.log('Осень');
+        break;
+    case 12:
+        console.log('Зима');
+        break;
+    default:
+        console.log('Такого месяца нет');
+        break;
+}
