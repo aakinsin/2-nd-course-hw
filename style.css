@@ -27,8 +27,8 @@ body {
   line-height: normal;
   padding-top: 217px;
   padding-bottom: 32px;
-  width: 788px;
-  height: 125px;
+  max-width: 788px;
+  min-height: 125px;
 }
 .header__text {
   color: #FFF;
@@ -37,8 +37,8 @@ body {
   font-weight: 300;
   line-height: 32px;
   padding-bottom: 44px;
-  width: 481px;
-  height: 64px;
+  max-width: 481px;
+  min-height: 64px;
 }
 .header__text_bold {
   font-weight: 700;
@@ -54,12 +54,16 @@ body {
   line-height: normal;
   padding: 13px 74px 13px 74px;
 }
+.header__button:hover {
+  background: #EB443F;
+}
 
 .game {
   background-color: #000915;
-  height: 556px;
+  min-height: 556px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 32px;
 }
 .game__number {
@@ -79,6 +83,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  box-sizing: border-box;
+}
+.game__number:hover {
+  border: 3px solid #44D2FF;
 }
 .game__number_1 {
   background-image: url(img/game_1.png);
@@ -88,4 +96,32 @@ body {
 }
 .game__number_3 {
   background-image: url(img/game_3.png);
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+  }
+  .header__head {
+    font-size: 32px;
+    text-align: center;
+  }
+  .header__text {
+    font-size: 14px;
+    text-align: center;
+  }
+  .game {
+    padding-bottom: 128px;
+  }
+  .game__number {
+    width: 343px;
+  }
 }/*# sourceMappingURL=style.css.map */

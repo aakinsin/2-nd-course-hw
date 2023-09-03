@@ -3,6 +3,8 @@
     padding: 0;
 }
 
+
+
 body {
     font-family: "Montserrat", sans-serif;
 }
@@ -27,8 +29,8 @@ body {
         line-height: normal;
         padding-top: 217px;
         padding-bottom: 32px;
-        width: 788px;
-        height: 125px;
+        max-width: 788px;
+        min-height: 125px;
     }
 
     &__text {
@@ -38,8 +40,8 @@ body {
         font-weight: 300;
         line-height: 32px;
         padding-bottom: 44px;
-        width: 481px;
-        height: 64px;
+        max-width: 481px;
+        min-height: 64px;
 
         &_bold {
             font-weight: 700;
@@ -56,14 +58,19 @@ body {
         font-weight: 400;
         line-height: normal;
         padding: 13px 74px 13px 74px;
+
+        &:hover {
+            background: #EB443F;
+        }
     }
 }
 
 .game {
     background-color: #000915;
-    height: 556px;
+    min-height: 556px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 32px;
 
     &__number {
@@ -83,6 +90,11 @@ body {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        box-sizing: border-box;
+
+        &:hover {
+            border: 3px solid #44D2FF;
+        }
 
         &_1 {
             background-image: url(img/game_1.png);
@@ -97,3 +109,5 @@ body {
         }
     }
 }
+
+@import "mobile";
