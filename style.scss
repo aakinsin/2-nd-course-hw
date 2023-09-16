@@ -49,19 +49,20 @@ body {
         }
     }
 
-    &__button {
-        border-radius: 30px;
-        background: #9C0332;
-        color: #FFF;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        padding: 13px 74px 13px 74px;
+}
 
-        &:hover {
-            background: #EB443F;
-        }
+.button {
+    border-radius: 30px;
+    background: #9C0332;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 13px 74px 13px 74px;
+
+    &:hover {
+        background: #EB443F;
     }
 }
 
@@ -107,6 +108,45 @@ body {
         &_3 {
             background-image: url(img/game_3.png);
         }
+    }
+}
+
+.firstGame {
+    height: 800px;
+    background-color: #000915;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left {
+        display: flex;
+        gap: 32px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    &__head {
+        color: #FFF;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__text {
+        color: #FFF;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 32px;
+        max-width: 584px;
+    }
+
+    &__img {
+        width: 485px;
+        height: 333px;
     }
 }
 

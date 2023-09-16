@@ -30,4 +30,35 @@
             width: 343px;
         }
     }
+
+    .firstGame {
+        padding-top: 51px;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+
+        &__left {
+            align-items: center;
+        }
+
+
+        &__head {
+            font-size: 32px;
+
+            &_off {
+                display: none;
+            }
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+        }
+
+        &__img {
+            width: 344px;
+            height: 236px;
+        }
+    }
 }
