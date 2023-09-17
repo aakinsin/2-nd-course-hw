@@ -10,12 +10,13 @@ lessOrMore(4, 4);
 //Задание 2
 function even(c) {
     if (c % 2 == 0) {
-        console.log('Число четное')
+        return ('Число четное')
     } else {
-        console.log('Число нечетное')
+        return ('Число нечетное')
     }
 }
 even(4);
+
 //Задание 3
 let square = (a) => {
     let result = a * a;
@@ -44,27 +45,26 @@ function access() {
 access();
 //Задание 5
 function notNumber(d, e) {
-    d = Number(d);
-    e = Number(e);
-    let mult = d * e;
-    if (isNaN(mult)) {
+    d = (d);
+    e = (e);
+    if (isNaN(d) || isNaN(e)) {
         console.log('Одно или оба значения не являются числом')
     } else {
-        console.log(mult)
+        console.log(d * e)
     }
 };
-notNumber(3, 7);
-//Задание 6
+notNumber(9, 7);
+//Задание 6*/
 function degree() {
     let n = prompt('Введите число');
     if (isNaN(n)) {
         console.log('Переданный параметр не является числом')
     } else {
-        console.log(`n в кубе равняется ${n * n}`)
+        console.log(`n в кубе равняется ${n ** 3}`)
     }
 }
-degree();*/
-//Задание 7
+degree();
+/*//Задание 7
 function getArea() {
     console.log(`Площадь окружности равна ${this.radius * 3.14 * this.radius}`)
 }
@@ -85,23 +85,23 @@ const circle2 = {
 circle1.getArea();
 circle2.getArea();
 circle1.getPerimeter();
-circle2.getPerimeter();
+circle2.getPerimeter();*/
 
 
 function Game1(a) {
     a = prompt('Введите порядковый номер месяца');
     if (isNaN(a)) {
-        console.log('Писать нужно цифрой.')
+        alert('Писать нужно цифрой.')
     } else
         if (a >= 1 && a <= 2 || a === 12) {
-            console.log('Зима');
+            alert('Зима');
         } else if (a >= 3 && a <= 5) {
-            console.log('Весна');
+            alert('Весна');
         } else if (a >= 6 && a <= 8) {
-            console.log('Лето');
+            alert('Лето');
         } else if (a >= 9 && a <= 11) {
-            console.log('Осень');
+            alert('Осень');
         } else {
-            console.log('Такого месяца явно нет.')
+            alert('Такого месяца явно нет.')
         }
 }
