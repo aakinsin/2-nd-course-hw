@@ -24,4 +24,28 @@
   .game__number {
     width: 343px;
   }
+  .firstGame {
+    padding-top: 51px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  .firstGame__left {
+    align-items: center;
+  }
+  .firstGame__head {
+    font-size: 32px;
+  }
+  .firstGame__head_off {
+    display: none;
+  }
+  .firstGame__text {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .firstGame__img {
+    width: 344px;
+    height: 236px;
+  }
 }/*# sourceMappingURL=mobile.css.map */
