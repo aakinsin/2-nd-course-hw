@@ -32,17 +32,10 @@ remove.reverse();
 console.log(remove);
 //Задание 7
 let i = prompt("Введите число");
-let b = 0;
-remove.forEach((el) => {
-    if (el == i) {
-        alert("Угадал");
-
-    } else {
-        b++
-    }
-});
-if (b == 5) {
-    alert("Не угадал");
+if (remove.includes(Number(i))) {
+    alert('Угадал');
+} else {
+    alert('Не угадал');
 }
 //Задание 8
 
@@ -51,14 +44,10 @@ line = line.split('');
 line = line.reverse();
 line = line.join('');
 console.log(line);
-//Задание 9
+//Задание 9*/
 const array2 = [[1, 2, 3], [4, 5, 6]];
-array2[0].push(array2[1][0]);
-array2[0].push(array2[1][1]);
-array2[0].push(array2[1][2]);
-array2.pop();
-console.log(array2[0]);
-//Задание 10
+console.log(array2.flat())
+/*//Задание 10
 const array3 = [6, 4, 9, 5, 2, 1, 6];
 for (let i = 0; i < array3.length; i++) {
     if (i == array3.length - 1) {
@@ -105,14 +94,14 @@ for (let index = 0; index < 10; index++) {
 console.log(allNumbers)
 const evenNumbers = allNumbers.filter(el => el % 2 === 0);
 console.log(evenNumbers);
-//Задание 15*/
+//Задание 15
 const arithmetic = [];
 for (let index = 0; index < 6; index++) {
     arithmetic[index] = Math.floor(Math.random() * 10);
 }
 console.log(arithmetic);
 const average = arithmetic.reduce((a, b) => a + b) / 6;
-console.log(average);
+console.log(average);*/
 
 function Game1(a) {
     a = prompt('Введите порядковый номер месяца');
