@@ -1,16 +1,25 @@
 /*//Задание 1
-const numbers = [1, 5, 4, 10, 0, 3];
-for (let i = 0; i < numbers.length; i++) {
-    console.log(numbers[i]);
-    if (numbers[i] == 10) break;
-
-}
+let str = 'oetngoetg.';
+console.log(str.toUpperCase());
 //Задание 2
-console.log(numbers.indexOf(4));
 
+function searchStart(array, b) {
+    const search = [];
+    array.forEach(el => {
+        if (el.toLowerCase().includes(b.toLowerCase())) {
+            search.push(el);
+        }
+    });
+    console.log(search);
+}
+searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко');
+searchStart(['яблоко', 'груша', 'гриб', 'огурец'], 'гру');
+searchStart(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино');
 //Задание 3
-const space = [1, 3, 5, 10, 20];
-console.log(space.join());
+let number = 32.58884;
+console.log(`1. ${Math.floor(number)}`);
+console.log(`2. ${Math.ceil(number)}`);
+console.log(`3. ${Math.round(number)}`);
 //Задание 4
 const multiArray = [];
 for (let i = 0; i < 3; i++) {
@@ -24,7 +33,7 @@ console.log(multiArray);
 const array1 = [1, 1, 1];
 array1.push(2, 2, 2);
 console.log(array1);
-//Задание 6
+//Задание 6*/
 const remove = [9, 8, 7, 'a', 6, 5];
 remove.sort();
 remove.pop();
@@ -44,7 +53,7 @@ remove.forEach((el) => {
 if (b == 5) {
     alert("Не угадал");
 }
-//Задание 8
+/*//Задание 8
 
 let line = 'abcdef';
 line = line.split('');
@@ -105,14 +114,14 @@ for (let index = 0; index < 10; index++) {
 console.log(allNumbers)
 const evenNumbers = allNumbers.filter(el => el % 2 === 0);
 console.log(evenNumbers);
-//Задание 15*/
+//Задание 15
 const arithmetic = [];
 for (let index = 0; index < 6; index++) {
     arithmetic[index] = Math.floor(Math.random() * 10);
 }
 console.log(arithmetic);
 const average = arithmetic.reduce((a, b) => a + b) / 6;
-console.log(average);
+console.log(average);*/
 
 function Game1(a) {
     a = prompt('Введите порядковый номер месяца');
