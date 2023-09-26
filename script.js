@@ -1,4 +1,4 @@
-//Задание 1
+/*//Задание 1
 const numbers = [1, 5, 4, 10, 0, 3];
 for (let i = 0; i < numbers.length; i++) {
     console.log(numbers[i]);
@@ -95,8 +95,24 @@ function filterPositive(array) {
 }
 filterPositive([-1, 0, 5, -10, 56]);
 filterPositive([-25, 25, 0, -1000, -2]);
+//Задание 14
+const allNumbers = [];
 
+for (let index = 0; index < 10; index++) {
+    allNumbers[index] = Math.floor(Math.random() * 10);
 
+}
+console.log(allNumbers)
+const evenNumbers = allNumbers.filter(el => el % 2 === 0);
+console.log(evenNumbers);
+//Задание 15*/
+const arithmetic = [];
+for (let index = 0; index < 6; index++) {
+    arithmetic[index] = Math.floor(Math.random() * 10);
+}
+console.log(arithmetic);
+const average = arithmetic.reduce((a, b) => a + b) / 6;
+console.log(average);
 
 function Game1(a) {
     a = prompt('Введите порядковый номер месяца');
