@@ -1,92 +1,107 @@
 /*//Задание 1
-function lessOrMore(a, b) {
-    if (a <= b) {
-        console.log(a);
-    } else {
-        console.log(b)
-    }
+const numbers = [1, 5, 4, 10, 0, 3];
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+    if (numbers[i] == 10) break;
+
 }
-lessOrMore(4, 4);
 //Задание 2
-function even(c) {
-    if (c % 2 == 0) {
-        return ('Число четное')
-    } else {
-        return ('Число нечетное')
-    }
-}
-even(4);
+console.log(numbers.indexOf(4));
 
 //Задание 3
-let square = (a) => {
-    let result = a * a;
-    console.log(result);
-    return result;
-}
-square(5);
+const space = [1, 3, 5, 10, 20];
+console.log(space.join());
 //Задание 4
-function access() {
-    let a = prompt('Укажите свой возвраст');
-
-    if (a < 0) {
-        console.log('Вы ввели неправильное значение')
-
-    } else {
-
-        if (a >= 13) {
-            console.log('Добро пожаловать!')
-        }
-        else {
-            console.log('Привет, друг!');
-
-        }
+const multiArray = [];
+for (let i = 0; i < 3; i++) {
+    multiArray[i] = [];
+    for (let j = 0; j < 3; j++) {
+        multiArray[i][j] = 1;
     }
 }
-access();
+console.log(multiArray);
 //Задание 5
-function notNumber(d, e) {
-    d = (d);
-    e = (e);
-    if (isNaN(d) || isNaN(e)) {
-        console.log('Одно или оба значения не являются числом')
+const array1 = [1, 1, 1];
+array1.push(2, 2, 2);
+console.log(array1);
+//Задание 6
+const remove = [9, 8, 7, 'a', 6, 5];
+remove.sort();
+remove.pop();
+remove.reverse();
+console.log(remove);
+//Задание 7
+let i = prompt("Введите число");
+if (remove.includes(Number(i))) {
+    alert('Угадал');
+} else {
+    alert('Не угадал');
+}
+//Задание 8
+
+let line = 'abcdef';
+line = line.split('');
+line = line.reverse();
+line = line.join('');
+console.log(line);
+//Задание 9*/
+const array2 = [[1, 2, 3], [4, 5, 6]];
+console.log(array2.flat())
+/*//Задание 10
+const array3 = [6, 4, 9, 5, 2, 1, 6];
+for (let i = 0; i < array3.length; i++) {
+    if (i == array3.length - 1) {
+        console.log(array3[i]);
     } else {
-        console.log(d * e)
+        console.log(array3[i] + array3[i + 1]);
     }
 };
-notNumber(9, 7);
-//Задание 6*/
-function degree() {
-    let n = prompt('Введите число');
-    if (isNaN(n)) {
-        console.log('Переданный параметр не является числом')
-    } else {
-        console.log(`n в кубе равняется ${n ** 3}`)
-    }
-}
-degree();
-/*//Задание 7
-function getArea() {
-    console.log(`Площадь окружности равна ${this.radius * 3.14 * this.radius}`)
-}
-function getPerimeter() {
-    console.log(`Периметр окружности равен ${2 * 3.14 * this.radius}`)
-}
-const circle1 = {
-    radius: 1,
-    getArea: getArea,
-    getPerimeter: getPerimeter
-}
+//Задание 11
 
-const circle2 = {
-    radius: 5,
-    getArea: getArea,
-    getPerimeter: getPerimeter
-}
-circle1.getArea();
-circle2.getArea();
-circle1.getPerimeter();
-circle2.getPerimeter();*/
+function square(array) {
+    const degree = array.map(el => el * el);
+    return degree;
+};
+square(array3);
+//Задание 12
+const words = ['слово', '', 'слог', 'длинное предложение', 'буква'];
 
+let a = ['Guatemala', 'Canada', 'Costa Rica', 'Anguilla', 'North Korea'];
+
+let aCountArr = [];
+
+function getLengthWords(array) {
+    for (let c of words) {
+        aCountArr.push(c.length)
+    };
+    return aCountArr;
+}
+getLengthWords(words);
+//Задание 13
+function filterPositive(array) {
+    const neg = array.filter(el => el < 0);
+    console.log(neg);
+}
+filterPositive([-1, 0, 5, -10, 56]);
+filterPositive([-25, 25, 0, -1000, -2]);
+//Задание 14
+const allNumbers = [];
+
+for (let index = 0; index < 10; index++) {
+    allNumbers[index] = Math.floor(Math.random() * 10);
+
+}
+console.log(allNumbers)
+const evenNumbers = allNumbers.filter(el => el % 2 === 0);
+console.log(evenNumbers);
+//Задание 15
+const arithmetic = [];
+for (let index = 0; index < 6; index++) {
+    arithmetic[index] = Math.floor(Math.random() * 10);
+}
+console.log(arithmetic);
+const average = arithmetic.reduce((a, b) => a + b) / 6;
+console.log(average);*/
 
 function Game1(a) {
     a = prompt('Введите порядковый номер месяца');
