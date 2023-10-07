@@ -21,107 +21,48 @@ console.log(`1. ${Math.floor(number)}`);
 console.log(`2. ${Math.ceil(number)}`);
 console.log(`3. ${Math.round(number)}`);
 //Задание 4
-const multiArray = [];
-for (let i = 0; i < 3; i++) {
-    multiArray[i] = [];
-    for (let j = 0; j < 3; j++) {
-        multiArray[i][j] = 1;
-    }
-}
-console.log(multiArray);
+console.log(`Минимальное значение ${Math.min(52, 53, 49, 77, 21, 32)}`);
+console.log(`Максимальное значение ${Math.max(52, 53, 49, 77, 21, 32)}`);
+
 //Задание 5
-const array1 = [1, 1, 1];
-array1.push(2, 2, 2);
-console.log(array1);
-//Задание 6*/
-const remove = [9, 8, 7, 'a', 6, 5];
-remove.sort();
-remove.pop();
-remove.reverse();
-console.log(remove);
+function randomNumber() {
+    console.log(Math.round(Math.random() * 10))
+};
+randomNumber();
+//Задание 6
+function getRandomArrNumbers(a) {
+    const array = [];
+    for (let index = 1; index <= a / 2; index++) {
+        array.push(Math.round(Math.random() * a));
+
+    }
+    console.log(array);
+}
+getRandomArrNumbers(prompt('Введите число'));
 //Задание 7
-let i = prompt("Введите число");
-let b = 0;
-remove.forEach((el) => {
-    if (el == i) {
-        alert("Угадал");
-
-    } else {
-        b++
-    }
-});
-if (b == 5) {
-    alert("Не угадал");
+function inRange(a, b) {
+    let c = Math.round(Math.random() * (b - a) + a);
+    console.log(c);
 }
-/*//Задание 8
-
-let line = 'abcdef';
-line = line.split('');
-line = line.reverse();
-line = line.join('');
-console.log(line);
+inRange(10, 25);
+//Задание 8
+let now = Date();
+console.log(now);
 //Задание 9
-const array2 = [[1, 2, 3], [4, 5, 6]];
-array2[0].push(array2[1][0]);
-array2[0].push(array2[1][1]);
-array2[0].push(array2[1][2]);
-array2.pop();
-console.log(array2[0]);
-//Задание 10
-const array3 = [6, 4, 9, 5, 2, 1, 6];
-for (let i = 0; i < array3.length; i++) {
-    if (i == array3.length - 1) {
-        console.log(array3[i]);
-    } else {
-        console.log(array3[i] + array3[i + 1]);
-    }
-};
-//Задание 11
+let currentDate = new Date();
+console.log(currentDate);
+currentDate.getDate(currentDate.setDate(73))
+console.log(currentDate);
 
-function square(array) {
-    const degree = array.map(el => el * el);
-    return degree;
-};
-square(array3);
-//Задание 12
-const words = ['слово', '', 'слог', 'длинное предложение', 'буква'];
-
-let a = ['Guatemala', 'Canada', 'Costa Rica', 'Anguilla', 'North Korea'];
-
-let aCountArr = [];
-
-function getLengthWords(array) {
-    for (let c of words) {
-        aCountArr.push(c.length)
-    };
-    return aCountArr;
+//Задание 10*/
+const ruDays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+const ruMonths = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
+let myDate = new Date();
+function ruDate(Date) {
+    console.log('Дата: ' + Date.getDate() + '-е ' + ruMonths[Date.getMonth()] + ' ' + Date.getFullYear() + ' года - это ' + ruDays[Date.getDay()] +
+        '. Время: ' + Date.getHours() + ':' + Date.getMinutes() + ':' + Date.getSeconds());
 }
-getLengthWords(words);
-//Задание 13
-function filterPositive(array) {
-    const neg = array.filter(el => el < 0);
-    console.log(neg);
-}
-filterPositive([-1, 0, 5, -10, 56]);
-filterPositive([-25, 25, 0, -1000, -2]);
-//Задание 14
-const allNumbers = [];
-
-for (let index = 0; index < 10; index++) {
-    allNumbers[index] = Math.floor(Math.random() * 10);
-
-}
-console.log(allNumbers)
-const evenNumbers = allNumbers.filter(el => el % 2 === 0);
-console.log(evenNumbers);
-//Задание 15
-const arithmetic = [];
-for (let index = 0; index < 6; index++) {
-    arithmetic[index] = Math.floor(Math.random() * 10);
-}
-console.log(arithmetic);
-const average = arithmetic.reduce((a, b) => a + b) / 6;
-console.log(average);*/
+ruDate(myDate);
 
 function Game1(a) {
     a = prompt('Введите порядковый номер месяца');
@@ -139,4 +80,20 @@ function Game1(a) {
         } else {
             alert('Такого месяца явно нет.')
         }
-}
+};
+
+
+function Game2(a, b) {
+    let fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+    fruits = fruits.sort(() => Math.random() - 0.5);
+    alert(fruits);
+    a = prompt('Чему равнялся первый элемент массива?');
+    b = prompt('Чему равнялся последний элемент массива?');
+    if (a != fruits[0] && b != fruits[6]) {
+        alert('Может в следующий раз получится?');
+    } else if (a == fruits[0] && b == fruits[6]) {
+        alert('У тебя отличная память.');
+    } else {
+        alert('Ты был близок к победе.')
+    }
+};
