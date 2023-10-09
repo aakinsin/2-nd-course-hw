@@ -30,6 +30,7 @@ function randomNumber() {
 };
 randomNumber();
 //Задание 6
+
 function getRandomArrNumbers(a) {
     const array = [];
     for (let index = 1; index <= a / 2; index++) {
@@ -54,6 +55,7 @@ console.log(currentDate);
 currentDate.getDate(currentDate.setDate(73))
 console.log(currentDate);
 
+
 //Задание 10*/
 const ruDays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
 const ruMonths = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
@@ -62,7 +64,9 @@ function ruDate(Date) {
     console.log('Дата: ' + Date.getDate() + '-е ' + ruMonths[Date.getMonth()] + ' ' + Date.getFullYear() + ' года - это ' + ruDays[Date.getDay()] +
         '. Время: ' + Date.getHours() + ':' + Date.getMinutes() + ':' + Date.getSeconds());
 }
+
 ruDate(myDate);
+
 
 function Game1(a) {
     a = prompt('Введите порядковый номер месяца');
