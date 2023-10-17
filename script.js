@@ -31,6 +31,7 @@ function randomNumber() {
 };
 randomNumber();
 //Задание 6
+
 function getRandomArrNumbers(a) {
     const array = [];
     for (let index = 1; index <= Math.floor(a / 2); index++) {
@@ -50,13 +51,14 @@ inRange(10, 25);
 //Задание 8
 let now = Date();
 console.log(now);
-//Задание 9*/
+//Задание 9
 let currentDate = new Date();
 console.log(currentDate);
 currentDate.getDate(currentDate.setDate(73))
 console.log(currentDate);
 
-/*//Задание 10
+
+//Задание 10
 const ruDays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
 const ruMonths = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
 let myDate = new Date();
