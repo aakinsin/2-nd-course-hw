@@ -185,6 +185,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 64px;
+    padding-bottom: 85px;
   }
   .firstGame__left {
     align-items: center;
@@ -209,8 +210,13 @@ body {
     display: flex;
     flex-direction: column-reverse;
     gap: 64px;
+    padding-bottom: 90px;
   }
   .secondGame__right {
     align-items: center;
+  }
+  .secondGame__img {
+    width: 344px;
+    height: 236px;
   }
 }/*# sourceMappingURL=style.css.map */

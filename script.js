@@ -6,16 +6,17 @@ console.log(str.toUpperCase());
 function searchStart(array, b) {
     const search = [];
     array.forEach(el => {
-        if (el.toLowerCase().includes(b.toLowerCase())) {
+        if (el.toLowerCase().startsWith(b.toLowerCase())) {
             search.push(el);
         }
     });
-    console.log(search);
+    return search;
 }
 searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко');
 searchStart(['яблоко', 'груша', 'гриб', 'огурец'], 'гру');
 searchStart(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино');
 //Задание 3
+
 let number = 32.58884;
 console.log(`1. ${Math.floor(number)}`);
 console.log(`2. ${Math.ceil(number)}`);
@@ -26,35 +27,36 @@ console.log(`Максимальное значение ${Math.max(52, 53, 49, 77
 
 //Задание 5
 function randomNumber() {
-    console.log(Math.round(Math.random() * 10))
+    console.log(Math.floor(Math.random() * 10 + 1))
 };
 randomNumber();
 //Задание 6
 function getRandomArrNumbers(a) {
     const array = [];
-    for (let index = 1; index <= a / 2; index++) {
-        array.push(Math.round(Math.random() * a));
+    for (let index = 1; index <= Math.floor(a / 2); index++) {
+        array.push(Math.floor(Math.random() * a));
 
     }
-    console.log(array);
+    return array;
 }
-getRandomArrNumbers(prompt('Введите число'));
+getRandomArrNumbers(10);
+
 //Задание 7
 function inRange(a, b) {
-    let c = Math.round(Math.random() * (b - a) + a);
-    console.log(c);
+    let c = Math.floor(Math.random() * (b - a) + a);
+    return c;
 }
 inRange(10, 25);
 //Задание 8
 let now = Date();
 console.log(now);
-//Задание 9
+//Задание 9*/
 let currentDate = new Date();
 console.log(currentDate);
 currentDate.getDate(currentDate.setDate(73))
 console.log(currentDate);
 
-//Задание 10*/
+/*//Задание 10
 const ruDays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
 const ruMonths = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
 let myDate = new Date();
@@ -62,14 +64,14 @@ function ruDate(Date) {
     console.log('Дата: ' + Date.getDate() + '-е ' + ruMonths[Date.getMonth()] + ' ' + Date.getFullYear() + ' года - это ' + ruDays[Date.getDay()] +
         '. Время: ' + Date.getHours() + ':' + Date.getMinutes() + ':' + Date.getSeconds());
 }
-ruDate(myDate);
+ruDate(myDate);*/
 
 function Game1(a) {
     a = prompt('Введите порядковый номер месяца');
     if (isNaN(a)) {
         alert('Писать нужно цифрой.')
     } else
-        if (a >= 1 && a <= 2 || a === 12) {
+        if (a >= 1 && a <= 2 || a == 12) {
             alert('Зима');
         } else if (a >= 3 && a <= 5) {
             alert('Весна');
@@ -87,11 +89,15 @@ function Game2(a, b) {
     let fruits = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
     fruits = fruits.sort(() => Math.random() - 0.5);
     alert(fruits);
+    let c = fruits[0];
+    c = c.toLowerCase();
+    let d = fruits[6];
+    d = d.toLowerCase();
     a = prompt('Чему равнялся первый элемент массива?');
     b = prompt('Чему равнялся последний элемент массива?');
-    if (a != fruits[0] && b != fruits[6]) {
+    if (a.toLowerCase != c && b.toLowerCase() != d) {
         alert('Может в следующий раз получится?');
-    } else if (a == fruits[0] && b == fruits[6]) {
+    } else if (a.toLowerCase() == c && b.toLowerCase() == d) {
         alert('У тебя отличная память.');
     } else {
         alert('Ты был близок к победе.')
