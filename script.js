@@ -51,13 +51,13 @@ inRange(10, 25);
 //Задание 8
 let now = Date();
 console.log(now);
-//Задание 9
+*///Задание 9
 let currentDate = new Date();
 console.log(currentDate);
-currentDate.getDate(currentDate.setDate(73))
+currentDate.setDate(+currentDate.getDate() + 73);
 console.log(currentDate);
 
-
+/*
 //Задание 10
 const ruDays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
 const ruMonths = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
@@ -97,7 +97,7 @@ function Game2(a, b) {
     d = d.toLowerCase();
     a = prompt('Чему равнялся первый элемент массива?');
     b = prompt('Чему равнялся последний элемент массива?');
-    if (a.toLowerCase != c && b.toLowerCase() != d) {
+    if (a.toLowerCase() != c && b.toLowerCase() != d) {
         alert('Может в следующий раз получится?');
     } else if (a.toLowerCase() == c && b.toLowerCase() == d) {
         alert('У тебя отличная память.');
