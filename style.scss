@@ -150,4 +150,26 @@ body {
     }
 }
 
+.secondGame {
+    height: 800px;
+    background-color: #000915;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__img {
+        height: 322px;
+        width: 481px;
+    }
+
+    &__right {
+        display: flex;
+        gap: 32px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
 @import "mobile";

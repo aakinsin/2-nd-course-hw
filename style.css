@@ -134,6 +134,26 @@ body {
   height: 333px;
 }
 
+.secondGame {
+  height: 800px;
+  background-color: #000915;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.secondGame__img {
+  height: 322px;
+  width: 481px;
+}
+.secondGame__right {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 @media (max-width: 767px) {
   .center {
     padding-left: 16px;
@@ -165,6 +185,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 64px;
+    padding-bottom: 85px;
   }
   .firstGame__left {
     align-items: center;
@@ -181,6 +202,20 @@ body {
     text-align: center;
   }
   .firstGame__img {
+    width: 344px;
+    height: 236px;
+  }
+  .secondGame {
+    padding-top: 51px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 64px;
+    padding-bottom: 90px;
+  }
+  .secondGame__right {
+    align-items: center;
+  }
+  .secondGame__img {
     width: 344px;
     height: 236px;
   }
