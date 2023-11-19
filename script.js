@@ -1,72 +1,89 @@
 /*//Задание 1
-let str = 'oetngoetg.';
-console.log(str.toUpperCase());
-//Задание 2
 
-function searchStart(array, b) {
-    const search = [];
-    array.forEach(el => {
-        if (el.toLowerCase().startsWith(b.toLowerCase())) {
-            search.push(el);
-        }
-    });
-    return search;
-}
-searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко');
-searchStart(['яблоко', 'груша', 'гриб', 'огурец'], 'гру');
-searchStart(['Дом', 'Банк', 'Больница', 'Театр'], 'Кино');
-//Задание 3
-
-let number = 32.58884;
-console.log(`1. ${Math.floor(number)}`);
-console.log(`2. ${Math.ceil(number)}`);
-console.log(`3. ${Math.round(number)}`);
-//Задание 4
-console.log(`Минимальное значение ${Math.min(52, 53, 49, 77, 21, 32)}`);
-console.log(`Максимальное значение ${Math.max(52, 53, 49, 77, 21, 32)}`);
-
-//Задание 5
-function randomNumber() {
-    console.log(Math.floor(Math.random() * 10 + 1))
-};
-randomNumber();
-//Задание 6
-
-function getRandomArrNumbers(a) {
-    const array = [];
-    for (let index = 1; index <= Math.floor(a / 2); index++) {
-        array.push(Math.floor(Math.random() * a));
-
+const people = [
+    { name: 'Глеб', age: 29 },
+    { name: 'Анна', age: 17 },
+    { name: 'Олег', age: 7 },
+    { name: 'Оксана', age: 47 }
+];
+console.log(people.sort(function (a, b) {
+    if (a.age > b.age) {
+        return 1;
     }
-    return array;
+    if (a.age < b.age) {
+        return -1;
+    }
+    return 0;
+}));
+//Задание 2
+function isPositive(a) {
+    let b = 0;
+    if (a > 0) {
+        b = a;
+    }
+    return b;
 }
-getRandomArrNumbers(10);
+function isMale(a) {
+    let b = 0;
+    if (a.gender == 'male') {
+        b = a;
+    }
+    return b;
+}
+function filter(arr, func) {
+    const output = [];
+    const c = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (func(arr[i]) === 0) {
+            c.push(func(arr[i]));
+        } else {
+            output.push(func(arr[i]));
+        }
+    };
+    return output;
+}
 
-//Задание 7
-function inRange(a, b) {
-    let c = Math.floor(Math.random() * (b - a) + a);
-    return c;
-}
-inRange(10, 25);
-//Задание 8
-let now = Date();
-console.log(now);
-*///Задание 9
-let currentDate = new Date();
-console.log(currentDate);
-currentDate.setDate(+currentDate.getDate() + 73);
-console.log(currentDate);
+console.log(filter([3, -4, 1, 9], isPositive)); // Должен выводить [3, 1, 9]
 
-/*
-//Задание 10
-const ruDays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
-const ruMonths = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
-let myDate = new Date();
-function ruDate(Date) {
-    console.log('Дата: ' + Date.getDate() + '-е ' + ruMonths[Date.getMonth()] + ' ' + Date.getFullYear() + ' года - это ' + ruDays[Date.getDay()] +
-        '. Время: ' + Date.getHours() + ':' + Date.getMinutes() + ':' + Date.getSeconds());
+const people = [
+    { name: 'Глеб', gender: 'male' },
+    { name: 'Анна', gender: 'female' },
+    { name: 'Олег', gender: 'male' },
+    { name: 'Оксана', gender: 'female' }
+];
+
+console.log(filter(people, isMale)); // Должен выводить [{name: 'Глеб', gender: 'male'},  {name: 'Олег', gender: 'male'}]
+//Задание 3
+let timerId = setInterval(() => console.log(Date()), 3000);
+setTimeout(() => { clearInterval(timerId); console.log('30 Секунд прошло.'); }, 30000);
+//Задание 4*/
+function delayForSecond(callback) {
+    setTimeout(callback, 1000);
 }
-ruDate(myDate);*/
+
+delayForSecond(function () {
+    console.log('Привет, Глеб!');
+})
+/*//Задание 5
+// Функция delayForSecond через 1 секунду пишет в консоль «Прошла одна секунда», 
+// а затем вызывает переданный колбэк
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if (cb) { cb(); }
+
+    }, 1000)
+}
+
+// Функция sayHi выводит в консоль приветствие для указанного имени
+function sayHi(name) {
+    console.log(`Привет, ${name}!`);
+}
+
+// Код выше менять нельзя
+
+// Нужно изменить код ниже:
+delayForSecond(() => sayHi('Глеб'))*/
 
 function Game1(a) {
     a = prompt('Введите порядковый номер месяца');
