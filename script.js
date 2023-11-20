@@ -15,29 +15,26 @@ console.log(people.sort(function (a, b) {
     }
     return 0;
 }));
-//Задание 2
+*///Задание 2
 function isPositive(a) {
-    let b = 0;
-    if (a > 0) {
-        b = a;
+    if (a >= 0) {
+        return true;
+    } else {
+        return false;
     }
-    return b;
 }
 function isMale(a) {
-    let b = 0;
     if (a.gender == 'male') {
-        b = a;
+        return true;
+    } else {
+        return false;
     }
-    return b;
 }
 function filter(arr, func) {
     const output = [];
-    const c = [];
     for (let i = 0; i < arr.length; i++) {
-        if (func(arr[i]) === 0) {
-            c.push(func(arr[i]));
-        } else {
-            output.push(func(arr[i]));
+        if (func(arr[i]) === true) {
+            output.push(arr[i]);
         }
     };
     return output;
@@ -53,10 +50,10 @@ const people = [
 ];
 
 console.log(filter(people, isMale)); // Должен выводить [{name: 'Глеб', gender: 'male'},  {name: 'Олег', gender: 'male'}]
-//Задание 3
+/*//Задание 3
 let timerId = setInterval(() => console.log(Date()), 3000);
 setTimeout(() => { clearInterval(timerId); console.log('30 Секунд прошло.'); }, 30000);
-//Задание 4*/
+//Задание 4
 function delayForSecond(callback) {
     setTimeout(callback, 1000);
 }
@@ -64,7 +61,7 @@ function delayForSecond(callback) {
 delayForSecond(function () {
     console.log('Привет, Глеб!');
 })
-/*//Задание 5
+//Задание 5
 // Функция delayForSecond через 1 секунду пишет в консоль «Прошла одна секунда», 
 // а затем вызывает переданный колбэк
 function delayForSecond(cb) {
